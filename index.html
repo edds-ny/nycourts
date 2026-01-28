@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronic Document Delivery Systems (EDDS) | 2026 Guide</title>
+    <meta name="description" content="Master Electronic Document Delivery Systems (EDDS). Explore the architecture, security protocols, and ROI of secure digital document transfer in 2026.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS (via CDN for standalone file utility) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "Electronic Document Delivery Systems (EDDS): The Ultimate Guide to Secure Digital Logistics",
+          "description": "Master Electronic Document Delivery Systems (EDDS). Explore the architecture, security protocols, and ROI of secure digital document transfer in 2026.",
+          "author": {
+            "@type": "Person",
+            "name": "Elite SEO Strategist"
+          },
+          "datePublished": "2026-01-28",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://yourwebsite.com/electronic-document-delivery-system-guide"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is email considered an EDDS?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Technically, email delivers documents, but it is not considered a professional EDDS. Email lacks encryption at rest, has file size limitations (usually 25MB), offers no audit trail, and provides no DRM controls. For sensitive or large-scale delivery, email is non-compliant and insecure."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does EDDS handle copyright laws?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "EDDS platforms include copyright modules that track usage against CONTU guidelines (Rule of 5) and Fair Use doctrines. They alert administrators when royalty payments are required and use DRM to prevent unauthorized distribution of copyrighted material."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the difference between EDDS and DMS?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A Document Management System (DMS) is for storage and organization (filing). An Electronic Document Delivery System (EDDS) is for logistics and transfer (shipping). While a DMS holds the files, the EDDS is the vehicle that securely transports them to the end user."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        /* Custom Styles for better reading experience */
+        body {
+            background-color: #f8fafc;
+        }
+        .prose-custom p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: #334155;
+            font-size: 1.125rem;
+        }
+        .prose-custom h2 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+        .prose-custom h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        .prose-custom ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .prose-custom li {
+            margin-bottom: 0.5rem;
+            color: #334155;
+        }
+        
+        /* Sticky TOC Active State */
+        .toc-link.active {
+            color: #0284c7;
+            border-left: 3px solid #0284c7;
+            background-color: #f0f9ff;
+            font-weight: 600;
+        }
+        
+        /* FAQ Animation */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 500px; /* Approximate max height */
+            transition: max-height 0.5s ease-in;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <i class="fa-solid fa-server text-brand-600 text-2xl"></i>
+                    <span class="font-bold text-xl text-slate-800">EDDS<span class="text-brand-600">Guide</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#intro" class="text-gray-600 hover:text-brand-600 px-3 py-2 rounded-md text-sm font-medium">Overview</a>
+                    <a href="#architecture" class="text-gray-600 hover:text-brand-600 px-3 py-2 rounded-md text-sm font-medium">Architecture</a>
+                    <a href="#roi" class="text-gray-600 hover:text-brand-600 px-3 py-2 rounded-md text-sm font-medium">ROI</a>
+                    <a href="#faq" class="bg-brand-600 text-white hover:bg-brand-800 px-4 py-2 rounded-md text-sm font-medium transition">View FAQ</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Hero -->
+    <header id="intro" class="bg-slate-900 text-white py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-brand-500 uppercase rounded-full bg-brand-900 bg-opacity-50">
+                2026 Strategic Guide
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+                Electronic Document Delivery Systems (EDDS): <br/>
+                <span class="text-brand-400">The Ultimate Guide to Secure Digital Logistics</span>
+            </h1>
+            <p class="text-xl text-slate-300 max-w-2xl mx-auto">
+                Explore the architecture, security protocols, and ROI of secure digital document transfer in an era of total digital transformation.
+            </p>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="lg:grid lg:grid-cols-12 lg:gap-12">
+            
+            <!-- Sidebar / Table of Contents -->
+            <aside class="hidden lg:block lg:col-span-3">
+                <div class="sticky top-24 overflow-y-auto">
+                    <h5 class="text-slate-900 font-bold mb-4 uppercase text-sm tracking-wide">Table of Contents</h5>
+                    <nav class="space-y-1" id="toc">
+                        <a href="#what-is-edds" class="toc-link block border-l-2 border-transparent pl-4 py-2 text-sm text-gray-600 hover:border-brand-600 hover:text-brand-600 transition">What is EDDS?</a>
+                        <a href="#architecture" class="toc-link block border-l-2 border-transparent pl-4 py-2 text-sm text-gray-600 hover:border-brand-600 hover:text-brand-600 transition">How Architecture Works</a>
+                        <a href="#applications" class="toc-link block border-l-2 border-transparent pl-4 py-2 text-sm text-gray-600 hover:border-brand-600 hover:text-brand-600 transition">Libraries vs. Enterprise</a>
+                        <a href="#features" class="toc-link block border-l-2 border-transparent pl-4 py-2 text-sm text-gray-600 hover:border-brand-600 hover:text-brand-600 transition">Critical Features 2026</a>
+                        <a href="#roi" class="toc-link block border-l-2 border-transparent pl-4 py-2 text-sm text-gray-600 hover:border-brand-600 hover:text-brand-600 transition">The ROI Data</a>
+                        <a href="#trends" class="toc-link block border-l-2 border-transparent pl-4 py-2 text-sm text-gray-600 hover:border-brand-600 hover:text-brand-600 transition">Future Trends</a>
+                        <a href="#faq" class="toc-link block border-l-2 border-transparent pl-4 py-2 text-sm text-gray-600 hover:border-brand-600 hover:text-brand-600 transition">FAQ</a>
+                    </nav>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="lg:col-span-9 prose-custom font-sans">
+                
+                <!-- Introduction -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 mb-8">
+                    <p class="lead text-xl text-slate-700 font-serif italic mb-6">
+                        In an era where remote work and digital collaboration are the norms, the physical movement of paper is not just inefficient—it is an operational liability.
+                    </p>
+                    <p>
+                        As organizations race toward total digital transformation, the Electronic Document Delivery System (EDDS) has emerged as the critical infrastructure bridging the gap between static archives and dynamic user access.
+                    </p>
+                    <p>
+                        EDDS is no longer just about scanning a page and emailing a PDF. Today, it represents a sophisticated ecosystem of secure APIs, copyright management tools, and automated workflows designed to move sensitive information instantly across the globe. Whether utilized by major academic libraries for Interlibrary Loans (ILL) or by multinational corporations for <a href="http://arkansascourtconect.us/" target="_blank" rel="noopener noreferrer" class="text-brand-600 hover:underline">secure contract exchange</a>, EDDS is the backbone of modern information logistics.
+                    </p>
+                </div>
+
+                <!-- Section 1: What is EDDS -->
+                <section id="what-is-edds" class="scroll-mt-24">
+                    <h2>What is an Electronic Document Delivery System (EDDS)?</h2>
+                    <h3>Definition and Core Functionality</h3>
+                    <p>
+                        At its most fundamental level, an Electronic Document Delivery System is a technology framework that enables the <a href="http://nyscefs.us" target="_blank" rel="noopener noreferrer" class="text-brand-600 hover:underline">transfer of electronic documents</a> or digital copies of physical documents to a user upon request. According to Wikipedia, document delivery is a service within a library or institution that <a href="http://tdcjinmatesearch.us" target="_blank" rel="noopener noreferrer" class="text-brand-600 hover:underline">retrieves and delivers specific documents</a> to users, a concept that has now expanded rapidly into the corporate sector.
+                    </p>
+                    <p>However, modern EDDS goes beyond simple delivery. It encompasses the entire lifecycle of the request:</p>
+                    <div class="grid md:grid-cols-2 gap-4 my-6">
+                        <div class="bg-slate-50 p-4 rounded-lg border-l-4 border-brand-500">
+                            <strong class="block text-slate-900">Discovery</strong>
+                            <span class="text-sm text-slate-600">Locating the document within a vast repository.</span>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-lg border-l-4 border-brand-500">
+                            <strong class="block text-slate-900">Authentication</strong>
+                            <span class="text-sm text-slate-600">Verifying the user's right to access the data.</span>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-lg border-l-4 border-brand-500">
+                            <strong class="block text-slate-900">Processing</strong>
+                            <span class="text-sm text-slate-600">Converting formats (e.g., TIFF to searchable PDF).</span>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-lg border-l-4 border-brand-500">
+                            <strong class="block text-slate-900">Delivery</strong>
+                            <span class="text-sm text-slate-600">Secure transmission via cloud links or encrypted portals.</span>
+                        </div>
+                    </div>
+
+                    <h3>The Evolution: From Fax to Cloud-Based APIs</h3>
+                    <p>
+                        The lineage of EDDS can be traced back to the facsimile (fax) machine, which revolutionized business speed in the 1980s. The 1990s introduced email attachments, but file size limits and <a href="http://webcrimes.us" target="_blank" rel="noopener noreferrer" class="text-brand-600 hover:underline">security vulnerabilities</a> made this untenable for sensitive data.
+                    </p>
+                    <p>
+                        By 2024, the landscape had shifted entirely to cloud-native solutions. Modern systems utilize SaaS (Software as a Service) models, allowing for scalability that was previously impossible. This evolution is driven by the need for speed; a recent report by Forbes highlights that <strong>56% of CEOs</strong> say digital improvements have already led to increased revenue. EDDS is a central pillar of this revenue-generating efficiency.
+                    </p>
+                </section>
+
+                <!-- Section 2: Architecture -->
+                <section id="architecture" class="scroll-mt-24">
+                    <h2>How EDDS Architecture Works</h2>
+                    <p>Understanding the "how" requires looking under the hood at the workflow that occurs from the moment a user clicks "Request."</p>
+                    
+                    <div class="space-y-6 mt-6">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-10 w-10 rounded-full bg-brand-100 text-brand-600 font-bold">1</div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-bold text-slate-900">Request Generation & Authentication</h4>
+                                <p class="text-sm mt-1">Identity Management (IdM) queries LDAP/SSO to verify the user. In a corporate setting, it could be a legal team <a href="http://oscn.online/" target="_blank" rel="noopener noreferrer" class="text-brand-600 hover:underline">requesting a case file</a>.</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-10 w-10 rounded-full bg-brand-100 text-brand-600 font-bold">2</div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-bold text-slate-900">Document Retrieval & Digitization</h4>
+                                <p class="text-sm mt-1">If digital, retrieval is instant. If physical, a "scan-on-demand" workflow triggers. OCR Integration ensures documents are searchable, not just static images.</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-10 w-10 rounded-full bg-brand-100 text-brand-600 font-bold">3</div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-bold text-slate-900">Secure Transmission (The "Pull" Method)</h4>
+                                <p class="text-sm mt-1">Instead of attaching files, the system sends a secure URL. Users authenticate to download from a portal, preventing data dormancy in email inboxes.</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-10 w-10 rounded-full bg-brand-100 text-brand-600 font-bold">4</div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-bold text-slate-900">End-User Access & DRM Controls</h4>
+                                <p class="text-sm mt-1">DRM wrappers are applied, including Self-Destruct Timers (e.g., expires after 5 views) and Dynamic Watermarking with user IDs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 3: Applications -->
+                <section id="applications" class="scroll-mt-24">
+                    <h2>Strategic Applications: Libraries vs. Enterprise</h2>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="text-brand-600 text-3xl mb-4"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <h3 class="mt-0 text-xl text-slate-900">Academic Backbone: ILL</h3>
+                            <p class="text-sm">For universities, EDDS is synonymous with resource sharing. Systems like ILLiad or OCLC WorldShare allow libraries to function as a collective hive mind.</p>
+                            <p class="text-sm font-semibold mt-4 text-brand-600">Impact:</p>
+                            <p class="text-sm">Democratizes access to information, allowing smaller institutions to offer research capabilities rivaling Ivy League universities. Follows ALA "Fair Use" guidelines.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="text-indigo-600 text-3xl mb-4"><i class="fa-solid fa-building"></i></div>
+                            <h3 class="mt-0 text-xl text-slate-900">Corporate Sector: B2B</h3>
+                            <p class="text-sm">In the enterprise world, EDDS focuses on security and audit trails. Law firms use EDDS to deliver <a href="http://odcr.us" target="_blank" rel="noopener noreferrer" class="text-brand-600 hover:underline">discovery documents</a> totaling thousands of pages.</p>
+                            <p class="text-sm font-semibold mt-4 text-indigo-600">Impact:</p>
+                            <p class="text-sm">Provides immutable audit trails—every upload, download, and view is logged for compliance audits.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 4: Features -->
+                <section id="features" class="scroll-mt-24">
+                    <h2>Critical Features to Look for in 2026</h2>
+                    <p>When evaluating an EDDS vendor, prioritize these technical specifications.</p>
+                    
+                    <div class="bg-slate-900 text-white p-6 rounded-xl mt-6">
+                        <h3 class="text-white mt-0 mb-4"><i class="fa-solid fa-shield-halved mr-2"></i> Compliance and Security</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="text-brand-400 font-bold mb-2">Encryption (AES-256)</h4>
+                                <p class="text-slate-300 text-sm">Data must be encrypted at rest and in transit. NIST standards ensure that even intercepted packets remain unreadable.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-brand-400 font-bold mb-2">Regulatory (GDPR, HIPAA)</h4>
+                                <p class="text-slate-300 text-sm">Must support "Right to be Forgotten" purging and Business Associate Agreements (BAA) with strict access logging.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Integration Capabilities</h3>
+                    <p>A standalone EDDS creates data silos. The best systems offer RESTful APIs that integrate directly with:</p>
+                    <ul class="list-none space-y-2 pl-0">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i> LMS (Learning Management Systems) like Canvas or Blackboard.</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i> DMS (Document Management Systems) like SharePoint.</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i> ILS (Integrated Library Systems) like Alma or Koha.</li>
+                    </ul>
+                </section>
+
+                <!-- Section 5: ROI -->
+                <section id="roi" class="scroll-mt-24">
+                    <h2>The ROI of EDDS: Data-Driven Benefits</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center mt-8">
+                        <div class="p-6 bg-green-50 rounded-xl border border-green-100">
+                            <div class="text-4xl font-bold text-green-600 mb-2">60%</div>
+                            <div class="text-sm font-semibold text-green-800 uppercase tracking-wide">Labor Savings</div>
+                            <p class="text-xs text-green-700 mt-2">Reduction in staff time per request via automation.</p>
+                        </div>
+                        <div class="p-6 bg-green-50 rounded-xl border border-green-100">
+                            <div class="text-4xl font-bold text-green-600 mb-2">30%</div>
+                            <div class="text-sm font-semibold text-green-800 uppercase tracking-wide">Print Savings</div>
+                            <p class="text-xs text-green-700 mt-2">Reduction in paper/toner costs in Year 1.</p>
+                        </div>
+                        <div class="p-6 bg-green-50 rounded-xl border border-green-100">
+                            <div class="text-4xl font-bold text-green-600 mb-2">Min</div>
+                            <div class="text-sm font-semibold text-green-800 uppercase tracking-wide">Turnaround Time</div>
+                            <p class="text-xs text-green-700 mt-2">Reduced from 2-5 days to minutes or hours, so even if staff are in Tokyo, they can receive a document from a <a href="http://ecourtsnyc.us" target="_blank" rel="noopener noreferrer" class="text-brand-600 hover:underline">server in New York</a>.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 6: Future Trends -->
+                <section id="trends" class="scroll-mt-24">
+                    <h2>Future Trends in Document Delivery</h2>
+                    <div class="bg-gradient-to-r from-slate-100 to-white border-l-4 border-purple-600 p-6 mb-4">
+                        <h4 class="font-bold text-purple-900 text-lg">AI-Driven Sorting and Metadata</h4>
+                        <p class="text-sm text-slate-700 mb-0">Artificial Intelligence algorithms now analyze text to generate semantic metadata tags, making retrieval faster. AI can also predict requests based on course loads or project phases.</p>
+                    </div>
+                    <div class="bg-gradient-to-r from-slate-100 to-white border-l-4 border-blue-600 p-6">
+                        <h4 class="font-bold text-blue-900 text-lg">Blockchain for Immutable Verification</h4>
+                        <p class="text-sm text-slate-700 mb-0">Hashing documents on a blockchain ledger allows recipients to verify that a digital degree, contract, or certificate is 100% authentic and untampered.</p>
+                    </div>
+                </section>
+
+                <!-- Section 7: FAQ -->
+                <section id="faq" class="scroll-mt-24 mt-12 mb-12">
+                    <h2 class="border-none mb-8">Frequently Asked Questions</h2>
+                    <div class="space-y-4">
+                        
+                        <!-- FAQ Item 1 -->
+                        <div class="faq-item border border-gray-200 rounded-lg bg-white overflow-hidden">
+                            <button class="w-full text-left p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50 transition">
+                                <span class="font-bold text-slate-800">Is email considered an EDDS?</span>
+                                <i class="fa-solid fa-chevron-down text-gray-400 faq-icon transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-answer bg-gray-50 px-5">
+                                <p class="pb-5 pt-2 text-sm text-gray-600">
+                                    Technically, email delivers documents, but it is not considered a professional EDDS. Email lacks encryption at rest, has file size limitations (usually 25MB), offers no audit trail for who viewed the file, and provides no DRM controls. For sensitive or large-scale delivery, email is non-compliant and insecure.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 2 -->
+                        <div class="faq-item border border-gray-200 rounded-lg bg-white overflow-hidden">
+                            <button class="w-full text-left p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50 transition">
+                                <span class="font-bold text-slate-800">How does EDDS handle copyright laws?</span>
+                                <i class="fa-solid fa-chevron-down text-gray-400 faq-icon transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-answer bg-gray-50 px-5">
+                                <p class="pb-5 pt-2 text-sm text-gray-600">
+                                    EDDS platforms are designed with copyright modules that track usage. In academic settings, they monitor the "CONTU guidelines" (Rule of 5), alerting librarians if they request more than five articles from the same journal issue within a year, triggering royalty payments. In corporate settings, DRM prevents unauthorized distribution.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 3 -->
+                        <div class="faq-item border border-gray-200 rounded-lg bg-white overflow-hidden">
+                            <button class="w-full text-left p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50 transition">
+                                <span class="font-bold text-slate-800">What is the difference between EDDS and DMS?</span>
+                                <i class="fa-solid fa-chevron-down text-gray-400 faq-icon transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-answer bg-gray-50 px-5">
+                                <p class="pb-5 pt-2 text-sm text-gray-600">
+                                    A Document Management System (DMS) is for storage and organization (filing). An Electronic Document Delivery System (EDDS) is for logistics and transfer (shipping). While a DMS holds the files, the EDDS is the vehicle that securely transports them to the end user.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <span class="font-bold text-white text-lg">EDDS Guide</span>
+                <p class="text-sm mt-1">© 2026 Digital Logistics Resources. All rights reserved.</p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // 1. FAQ Accordion Logic
+        document.querySelectorAll('.faq-item button').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Close all others
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                });
+
+                // Toggle current
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // 2. Table of Contents Highlighter
+        const observerOptions = {
+            root: null,
+            rootMargin: '-20% 0px -60% 0px', // Trigger when section is near top
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Remove active from all links
+                    document.querySelectorAll('.toc-link').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    
+                    // Add active to current link
+                    const id = entry.target.getAttribute('id');
+                    const activeLink = document.querySelector(`.toc-link[href="#${id}"]`);
+                    if (activeLink) {
+                        activeLink.classList.add('active');
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections that are linked in TOC
+        document.querySelectorAll('section[id], header[id]').forEach((section) => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
