@@ -12,7 +12,7 @@ The article covers architecture workflows, security protocols (AES-256, GDPR com
 
 Access the full, formatted guide below.
 
-👉 **[CLICK HERE TO READ THE FULL GUIDE](index.html)** 👈
+👉 **[CLICK HERE TO READ THE FULL GUIDE](https://edds-ny.github.io/nycourts/)** 👈
 
 *(Note: Ensure your main article HTML file is named `index.html` in this repository for the link above to work correctly).*
 
